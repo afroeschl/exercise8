@@ -6,8 +6,7 @@
 #include "iue-num/numerics.h" // iuenum_isclose, iuenum_PI
 
 #include <assert.h> // assert
-#include <stdio.h> // printf
-
+#include <stdio.h>  // printf
 
 bool detail_isclose_vec2d(struct Vec2d a, struct Vec2d b) {
   if (!iuenum_isclose(a.x, b.x))
@@ -17,7 +16,7 @@ bool detail_isclose_vec2d(struct Vec2d a, struct Vec2d b) {
   return true;
 }
 
-bool detail_isclose_bbox(const struct BBox* a, const struct BBox* b) {
+bool detail_isclose_bbox(const struct BBox *a, const struct BBox *b) {
   if (!detail_isclose_vec2d(a->min, b->min))
     return false;
   if (!detail_isclose_vec2d(a->max, b->max))
@@ -25,7 +24,7 @@ bool detail_isclose_bbox(const struct BBox* a, const struct BBox* b) {
   return true;
 }
 
-bool detail_isclose_circle(const struct Circle* a, const struct Circle* b) {
+bool detail_isclose_circle(const struct Circle *a, const struct Circle *b) {
   if (!detail_isclose_vec2d(a->c, b->c))
     return false;
   if (!iuenum_isclose(a->r, b->r))

@@ -3,6 +3,7 @@
 
 #pragma once
 
+#include <math.h>    // cos, sin
 #include <stdbool.h> // bool, true, false
 
 /// @note you can assume all of the pointer type parameters are valid pointers and not NULL
